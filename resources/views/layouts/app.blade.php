@@ -22,7 +22,7 @@
     <body class="font-sans antialiased bg-background h-dvh overflow-auto">
         <div class="flex h-full">
             <livewire:layout.navigation />
-            <main class="w-full h-full p-5 gap-5 flex flex-col">
+            <main class="w-full h-full p-5 gap-5 flex flex-col overflow-auto">
                 {{ $slot  }}
             </main>
         </div>
