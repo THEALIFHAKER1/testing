@@ -1,16 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Livewire\Volt\Volt;
 
-Route::view('/example', 'example')
+
+
+
+Route::view('/example', 'pages.example')
     ->middleware(['auth', 'verified'])
-    ->name('test');
+    ->name('example');
 
-Route::view('/', 'dashboard')
+Route::view('/', 'pages.dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::view('profile', 'profile')
+Route::view('profile', 'pages.profile')
     ->middleware(['auth'])
     ->name('profile');
 
