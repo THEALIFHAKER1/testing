@@ -21,12 +21,11 @@ new #[Layout('layouts.guest')] class extends Component
     public function register(): void
     {
         $validated = $this->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
+            'companyName' => ['required', 'string', 'max:255'],
+            'contactName' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'string', 'max:255'],
         ]);
-
-        $validated['password'] = Hash::make($validated['password']);
 
         event(new Registered($user = User::create($validated)));
 
@@ -36,53 +35,97 @@ new #[Layout('layouts.guest')] class extends Component
     }
 }; ?>
 
-<div>
-    <form wire:submit="register">
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input wire:model="name" id="name" class="block mt-1 w-full" type="text" name="name" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+<div class="h-full flex w-full">
+    <div class="w-full grid place-items-center p-10">
+        <img draggable="false" src="{{ Vite::asset('resources/images/auth.svg') }}" alt="">
+    </div>
+    <div class="w-1/2 h-full grid place-items-center">
+        <div class="flex flex-col gap-5">
+            <img
+                draggable="false"
+                class="w-1/2"
+                src="{{ Vite::asset('resources/images/lapasarlogo.png') }}"
+                alt=""
+            >
+            <p class="text-3xl font-bold text-orange-500">
+                Hi there, Welcome to Lapasar.com!
+            </p>
+            <div class="bg-white p-5 rounded-2xl">
+                <!-- Session Status -->
+                <x-auth-session-status class="mb-4" :status="session('status')" />
+
+                <p class="text-center my-5">
+                    Enter your personal details and start your journey with us.
+                </p>
+                <form wire:submit="login">
+                    <!-- Company Name -->
+                    <div>
+                        <div class="flex items-center gap-2">
+                            🏢
+                            <x-text-input wire:model="form.companyName" id="companyName" class="block mt-1 w-full" type="text" name="companyName" required autofocus autocomplete="companyName" placeholder="Company Name"/>
+                        </div>
+                        <x-input-error :messages="$errors->get('form.companyName')" class="mt-2" />
+                    </div>
+
+                    <!-- Contact Person Name-->
+                    <div class="mt-4">
+                        <div class="flex items-center gap-2">
+                            🧑
+                            <x-text-input wire:model="form.contactName" id="contactName" class="block mt-1 w-full" type="text" name="contactName" required autofocus autocomplete="contactName" placeholder="Contact person Name"/>
+                        </div>
+                        <x-input-error :messages="$errors->get('form.contactName')" class="mt-2" />
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="mt-4">
+                        <div class="flex items-center gap-2">
+                            👥
+                            <x-text-input wire:model="form.email" id="email" class="block mt-1 w-full" type="email" name="email" required autofocus autocomplete="username" placeholder="Email"/>
+                        </div>
+                        <x-input-error :messages="$errors->get('form.email')" class="mt-2" />
+                    </div>
+
+                    <!-- Mobile phone -->
+                    <div class="mt-4">
+                        <div class="flex items-center gap-2">
+                            📱
+                            <x-text-input wire:model="form.phone" id="phone" class="block mt-1 w-full"
+                                          type="tel"
+                                          name="phone"
+                                          required autocomplete="current-phone"
+                                          placeholder="Mobile Number"
+                            />
+                        </div>
+                        <x-input-error :messages="$errors->get('form.password')" class="mt-2" />
+
+                        <!-- Agreed Checkbox -->
+                        <div class="block mt-4">
+                            <label for="remember" class="inline-flex items-center">
+                                <input x-model="agreed" id="agreed" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
+                                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('I have read and agreed to the ') }}</span> <a class="text-xs ml-1 text-blue-400" href="https://app-uat.lapasar.com/app/buyers/Buyer TnCs.pdf" target="_blank">Terms &amp; Policy</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Show Password -->
+
+                    <div class="flex items-center justify-end mt-4">
+                        <x-primary-button class="ms-3">
+                            {{ __('Sign Up') }}
+                        </x-primary-button>
+                    </div>
+                    <div class="flex justify-between mt-5">
+                        @if (Route::has('login'))
+                            <a class="hover:underline text-sm text-[#337ab7] " href="{{ route('login') }}" wire:navigate>
+                                {{ __('Already a member? Sign in here.') }}
+                            </a>
+                        @endif
+                    </div>
+                </form>
+            </div>
+            <p class="text-center text-xs">
+                Copyright 2019 | Lapasar.com
+            </p>
         </div>
-
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input wire:model="email" id="email" class="block mt-1 w-full" type="email" name="email" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input wire:model="password" id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input wire:model="password_confirmation" id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}" wire:navigate>
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
+    </div>
 </div>
