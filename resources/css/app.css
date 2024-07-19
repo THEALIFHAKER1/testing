@@ -72,13 +72,15 @@
 
 /* width */
 ::-webkit-scrollbar {
+    display: none;
     width: 5px;
     height: 5px;
-    display: block;
+    /* display: block; */
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
+    display: none;
     box-shadow: transparent;
 }
 
@@ -91,5 +93,6 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
+    display: none;
     background: rgb(139, 139, 139, 0.9);
 }

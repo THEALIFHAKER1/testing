@@ -17,7 +17,7 @@ new class extends Component
 }; ?>
 
 
-<nav class="bg-white dark:bg-foreground/20 h-full w-[270px] flex-col lg:flex hidden ">
+<nav class="bg-white dark:bg-foreground/20 h-full w-[270px] flex-col lg:flex hidden overflow-y-auto">
     <div class="flex-grow gap-2 flex flex-col">
         <div class="h-36 grid place-items-center gap-2 p-2">
             <img class="h-24 aspect-square rounded-full" src="https://app-uat.lapasar.com/app/buyers/uploads/user/16995988830.JPG" alt="">
@@ -140,7 +140,7 @@ new class extends Component
                 <li x-data="{ id: 4 }">
                     <a href="#" @click.prevent="openMenu = openMenu === id ? null : id" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">
                         <span class="icon">⚖️</span>
-                        <span class="ml-2">Manage Users</span>
+                        <span class="ml-2">Manage Unit Limit Exception</span>
                         <span class="ml-auto" x-show="openMenu !== id">+</span>
                         <span class="ml-auto" x-show="openMenu === id">-</span>
                     </a>
