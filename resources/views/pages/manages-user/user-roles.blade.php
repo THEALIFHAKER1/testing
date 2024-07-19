@@ -6,10 +6,7 @@
     </x-slot>
     <x-slot name="action">
         <x-primary-button>
-            Manage Charge Code
-        </x-primary-button>
-        <x-primary-button>
-            Add Location
+           ➕ ADD NEW ROLE
         </x-primary-button>
     </x-slot>
 

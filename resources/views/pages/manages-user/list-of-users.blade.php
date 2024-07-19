@@ -6,10 +6,10 @@
     </x-slot>
     <x-slot name="action">
         <x-primary-button>
-            Manage Charge Code
+           ➕ ADD NEW USER
         </x-primary-button>
-        <x-primary-button>
-            Add Location
+        <x-primary-button disable>
+           ✉️ Send Activation Email
         </x-primary-button>
     </x-slot>
 
