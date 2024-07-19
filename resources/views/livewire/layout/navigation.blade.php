@@ -74,10 +74,10 @@ new class extends Component
                     </a>
                     <ul x-show="openMenu === id" class="pl-8 ">
                         <li>
-                            <a href="#" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">User Roles</a>
+                            <a href="/user-roles" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">User Roles</a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">List of Users</a>
+                            <a href="/list-of-users" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">List of Users</a>
                         </li>
                     </ul>
                 </li>
