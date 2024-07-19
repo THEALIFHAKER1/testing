@@ -19,8 +19,8 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased bg-background h-dvh overflow-auto">
-        <div class="flex h-full">
+    <body class="font-sans antialiased bg-background h-dvh w-dvw overflow-auto">
+        <div class="flex h-full w-full">
             <livewire:layout.navigation />
             <main class="w-full h-full p-5 gap-5 flex flex-col overflow-auto">
                 {{ $slot  }}
