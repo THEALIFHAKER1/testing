@@ -14,6 +14,10 @@ Route::view('/', 'pages.dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+    Route::view('/manage-location', 'pages.manage-location')
+    ->middleware(['auth', 'verified'])
+    ->name('manage-location');
+
 Route::view('profile', 'pages.profile')
     ->middleware(['auth'])
     ->name('profile');
