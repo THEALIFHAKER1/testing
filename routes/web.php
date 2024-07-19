@@ -22,9 +22,13 @@ Route::view('/user-roles', 'pages.manages-user.user-roles')
     ->middleware(['auth', 'verified'])
     ->name('user-roles');
 
-    Route::view('/list-of-users', 'pages.manages-user.list-of-users')
+Route::view('/list-of-users', 'pages.manages-user.list-of-users')
     ->middleware(['auth', 'verified'])
     ->name('list-of-users');
+
+Route::view('/manage-workflow', 'pages.manage-workflow')
+    ->middleware(['auth', 'verified'])
+    ->name('manage-workflow');
 
 Route::view('profile', 'pages.profile')
     ->middleware(['auth'])

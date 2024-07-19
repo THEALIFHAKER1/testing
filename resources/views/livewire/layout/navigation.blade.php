@@ -82,7 +82,7 @@ new class extends Component
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">
+                    <a href="/manage-workflow" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">
                         <span class="icon">🔧</span>
                         <span class="ml-2">Manage Workflow</span>
                     </a>
