@@ -30,6 +30,10 @@ Route::view('/manage-workflow', 'pages.manage-workflow')
     ->middleware(['auth', 'verified'])
     ->name('manage-workflow');
 
+Route::view('/customize-report', 'pages.customize-report')
+    ->middleware(['auth', 'verified'])
+    ->name('manage-workflow');
+
 Route::view('profile', 'pages.profile')
     ->middleware(['auth'])
     ->name('profile');

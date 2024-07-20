@@ -160,7 +160,7 @@ new class extends Component
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">
+                    <a href="/customize-report" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">
                         <span class="icon">⚙️</span>
                         <span class="ml-2">Customize Report</span>
                     </a>
