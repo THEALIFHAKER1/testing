@@ -211,7 +211,7 @@ new class extends Component {
             </button>
         </div>
         {{-- a mobile navbar that slide from right --}}
-        <nav class="fixed top-0 right-0 bg-white dark:bg-foreground/20 h-full w-[270px] flex-col flex"
+        <nav class="fixed top-0 right-0 bg-background h-full w-[270px] flex-col flex"
         x-show="open" @click.away="open = false" x-cloak>
             <div class="flex-grow gap-2 flex flex-col overflow-auto">
                 <div class="h-36 grid place-items-center gap-2 p-2">
