@@ -40,7 +40,7 @@ new class extends Component {
 
 
 <div class="flex flex-col h-full">
-    <div class="w-full flex border-b">
+    <div class="w-full h-fit flex border-b">
         <div class="w-full overflow-auto flex">
             @foreach ($tabs as $tab)
                 <button wire:click="setActiveTab('{{ $tab['key'] }}')"
@@ -51,9 +51,9 @@ new class extends Component {
         </div>
     </div>
 
-    <div class="pt-5 flex-grow">
+    <div class="pt-5 flex-grow overflow-auto">
         @foreach ($tabs as $tab)
-            <div class="h-full" wire:key="{{ $tab['key'] }}" x-show="$wire.activeTab === '{{ $tab['key'] }}'" x-cloak>
+            <div class="h-full overflow-auto" wire:key="{{ $tab['key'] }}" x-show="$wire.activeTab === '{{ $tab['key'] }}'" x-cloak>
                 @include('livewire.profile.tabs.' . $tab['key'])
             </div>
         @endforeach

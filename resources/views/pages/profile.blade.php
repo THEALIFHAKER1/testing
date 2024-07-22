@@ -1,7 +1,7 @@
 
 <x-app-layout>
     <div class="flex md:flex-row flex-col gap-5 h-full">
-        <div class="flex flex-row md:flex-col gap-5 w-full md:w-72 h-full overflow-auto">
+        <div class="flex flex-row md:flex-col gap-5 w-full md:w-72 h-1/2 md:h-full overflow-auto">
             <div class="w-1/2 md:w-full p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow rounded-lg  gap-5 flex flex-col justify-center">
                 <div class="grid place-items-center">
                     <div class=" rounded-full border-primary border-2">

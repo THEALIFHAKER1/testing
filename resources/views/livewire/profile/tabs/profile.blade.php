@@ -34,29 +34,29 @@ new class extends Component
 ?>
 
     <form wire:submit.prevent="submit" enctype="multipart/form-data" class="flex flex-col h-full">
-        <div class="mb-4 flex gap-5 items-center ">
-            <label for="name" class="block font-semibold w-16">Name</label>
+        <div class="mb-4 flex flex-col  md:flex-row gap-2 md:gap-5 md:items-center  ">
+            <label for="name" class="block font-semibold md:w-16 w-full">Name</label>
             <input type="text" id="name" wire:model="name" class="block w-full rounded-md text-black disabled:bg-gray-100" disabled
                 value="{{ auth()->user()->name }}"
             />
         </div>
 
-        <div class="mb-4 flex gap-5 items-center">
-            <label for="email" class="block font-semibold w-16">Email</label>
+        <div class="mb-4 flex flex-col  md:flex-row gap-2 md:gap-5 md:items-center ">
+            <label for="email" class="block font-semibold md:w-16 w-full">Email</label>
             <input type="email" id="email" wire:model="email" class="block w-full rounded-md text-black disabled:bg-gray-100" disabled
                 value="{{ auth()->user()->email }}"
             />
         </div>
 
-        <div class="mb-4 flex gap-5 items-center">
-            <label for="phone" class="block font-semibold w-16">Phone</label>
+        <div class="mb-4 flex flex-col  md:flex-row gap-2 md:gap-5 md:items-center ">
+            <label for="phone" class="block font-semibold md:w-16 w-full">Phone</label>
             <input type="text" id="phone" wire:model="phone" class="block w-full rounded-md text-black disabled:bg-gray-100"
                 value="+60(3)20515000"
             />
         </div>
 
-        <div class="mb-4 flex gap-5 items-start ">
-            <label for="address" class="block font-semibold w-16 ">Address</label>
+        <div class="mb-4 flex md:gap-5 items-start md:flex-row flex-col gap-2  ">
+            <label for="address" class="block font-semibold md:w-16 w-full ">Address</label>
             <div>
                 <input type="text" id="address" wire:model="address" class="block w-full rounded-md text-black disabled:bg-gray-100" value="Menara 1, Menara Kembar Petronas"/>
                 <div class="my-2 grid grid-flow-col gap-5">
@@ -76,13 +76,13 @@ new class extends Component
             </div>
         </div>
 
-        <div class="mb-4 flex gap-5 items-center">
-            <label for="dob" class="block font-semibold w-16">Date of Birth</label>
+        <div class="mb-4 flex flex-col  md:flex-row gap-2 md:gap-5 md:items-center ">
+            <label for="dob" class="block font-semibold md:w-16 w-full">Date of Birth</label>
             <input type="date" id="dob" wire:model="dob" class="block w-full rounded-md disabled:bg-gray-100" />
         </div>
 
-        <div class="mb-4 flex gap-5 items-center">
-            <label class="block font-semibold w-16">Gender</label>
+        <div class="mb-4 flex flex-col  md:flex-row gap-2 md:gap-5 md:items-center ">
+            <label class="block font-semibold md:w-16 w-full">Gender</label>
             <div>
                 <label class="inline-flex items-center">
                     <input type="radio" wire:model="gender" value="Male" class="form-radio" />
@@ -95,13 +95,13 @@ new class extends Component
             </div>
         </div>
 
-        <div class="mb-4 flex gap-5 items-center">
-            <label for="staffId" class="block font-semibold w-16">Staff ID</label>
+        <div class="mb-4 flex flex-col  md:flex-row gap-2 md:gap-5 md:items-center ">
+            <label for="staffId" class="block font-semibold md:w-16 w-full">Staff ID</label>
             <input type="text" id="staffId" wire:model="staffId" class="block w-full rounded-md disabled:bg-gray-100" />
         </div>
 
-        <div class="mb-4 flex gap-5 items-center">
-            <label for="photo" class="block font-semibold w-16">Upload Photo</label>
+        <div class="mb-4 flex flex-col  md:flex-row gap-2 md:gap-5 md:items-center ">
+            <label for="photo" class="block font-semibold md:w-16 w-full">Upload Photo</label>
             <div>
                 <input type="file" name="attachment" class="block w-full text-sm  file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-white-700 hover:file:bg-orange-100">
                 <h2 class="mt-2 text-xs">Size Limit: 5MB | Allowed Format: .pdf, .jpg, .jpeg, .png</h2>
