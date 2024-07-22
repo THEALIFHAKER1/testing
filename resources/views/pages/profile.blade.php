@@ -1,7 +1,7 @@
 
 <x-app-layout>
-    <div class="flex md:flex-row flex-col gap-5 flex-grow">
-        <div class="flex flex-col gap-5 w-72">
+    <div class="flex md:flex-row flex-col gap-5 h-full bg-orange-500">
+        <div class="flex flex-col gap-5 w-72 h-fullx overflow-auto">
             <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow sm:rounded-lg  gap-5 flex flex-col">
                 <div class="grid place-items-center">
                     <div class=" rounded-full border-primary border-2">
@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow sm:rounded-lg overflow-auto w-full">
+        <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow sm:rounded-lg h-full overflow-auto w-full">
             <livewire:profile.profile-tabs-component />
         </div>
     </div>
