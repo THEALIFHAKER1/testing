@@ -109,7 +109,7 @@ new class extends Component
         </div>
 
 
-        <div class="mt-auto">
+        <div class="mt-auto py-5">
             <x-primary-button type="submit" class="bg-primary text-white px-4 py-2 rounded">Save</x-primary-button>
         </div>
     </form>

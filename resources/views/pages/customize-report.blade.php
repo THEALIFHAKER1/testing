@@ -4,7 +4,7 @@
             {{ __('Report (Customizable On-Demand Report)') }}
         </h2>
     </x-slot>
-    <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow sm:rounded-lg overflow-auto h-full w-full">
+    <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow rounded-lg overflow-auto h-full w-full">
         <div class="flex justify-between items-center text-center align-middle pb-5 border-b">
             <div class="w-full overflow-auto flex text-3xl font-bold">
                 SUPPLIER ANALYTICS

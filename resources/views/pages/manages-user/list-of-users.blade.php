@@ -13,7 +13,7 @@
         </x-primary-button>
     </x-slot>
 
-    <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow sm:rounded-lg overflow-auto h-full w-full">
+    <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow rounded-lg overflow-auto h-full w-full">
         <div class="w-full overflow-auto flex border-b pb-5">
             LIST OF USER ROLES
         </div>

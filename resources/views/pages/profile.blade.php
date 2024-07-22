@@ -1,8 +1,8 @@
 
 <x-app-layout>
-    <div class="flex md:flex-row flex-col gap-5 h-full bg-orange-500">
-        <div class="flex flex-col gap-5 w-72 h-fullx overflow-auto">
-            <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow sm:rounded-lg  gap-5 flex flex-col">
+    <div class="flex md:flex-row flex-col gap-5 h-full">
+        <div class="flex flex-row md:flex-col gap-5 w-full md:w-72 h-full overflow-auto">
+            <div class="w-1/2 md:w-full p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow rounded-lg  gap-5 flex flex-col justify-center">
                 <div class="grid place-items-center">
                     <div class=" rounded-full border-primary border-2">
                     <img class="h-24 aspect-square rounded-full" src="https://app-uat.lapasar.com/app/buyers/uploads/user/16995988830.JPG" alt="">
@@ -11,12 +11,12 @@
 
                 <div class="text-center">
                     <div class="font-bold" >{{ auth()->user()->name }}</div>
-                    <div>{{ auth()->user()->email }}</div>
-                    <div class="text-primary font-semibold">+60(3)20515000</div>
+                    <div class="text-xs md:text-sm xl:text-base">{{ auth()->user()->email }}</div>
+                    <div class="text-xs md:text-sm xl:text-base text-primary font-semibold">+60(3)20515000</div>
                 </div>
             </div>
 
-            <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow sm:rounded-lg divide-y">
+            <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow rounded-lg divide-y overflow-auto">
                 <div class="pb-5">
                     ABOUT ME
                 </div>
@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow sm:rounded-lg h-full overflow-auto w-full">
+        <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow rounded-lg h-full overflow-auto w-full">
             <livewire:profile.profile-tabs-component />
         </div>
     </div>
