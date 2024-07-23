@@ -146,12 +146,12 @@ new class extends Component {
                         </a>
                         <ul x-show="openMenu === id" class="pl-8 ">
                             <li>
-                                <a href="#"
+                                <a href="/manage-budget"
                                     class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage
                                     Budget</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/manage-gl-code"
                                     class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage GL
                                     CODE</a>
                             </li>
@@ -349,12 +349,12 @@ new class extends Component {
                             </a>
                             <ul x-show="openMenu === id" class="pl-8 ">
                                 <li>
-                                    <a href="#"
+                                    <a href="/manage-budget"
                                         class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage
                                         Budget</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="/manage-gl-code"
                                         class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage GL
                                         CODE</a>
                                 </li>

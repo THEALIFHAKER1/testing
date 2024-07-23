@@ -54,6 +54,14 @@ Route::view('/chat', 'pages.chat')
     ->middleware(['auth', 'verified'])
     ->name('chat');
 
+Route::view('/manage-budget', 'pages.manage-budget.manage-budget')
+    ->middleware(['auth', 'verified'])
+    ->name('manage-budget');
+
+Route::view('/manage-gl-code', 'pages.manage-budget.manage-gl-code')
+    ->middleware(['auth', 'verified'])
+    ->name('manage-gl-code');
+
 Route::view('profile', 'pages.profile')
     ->middleware(['auth'])
     ->name('profile');
