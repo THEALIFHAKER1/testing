@@ -42,6 +42,10 @@ Route::view('/manage-pre-orders', 'pages.manage-orders.manage-pre-orders')
     ->middleware(['auth', 'verified'])
     ->name('manage-pre-orders');
 
+Route::view('/manage-budget-request', 'pages.manage-orders.manage-budget-request')
+    ->middleware(['auth', 'verified'])
+    ->name('manage-budget-request');
+
 Route::view('/manage-cart-id', 'pages.manage-orders.manage-cart-id')
     ->middleware(['auth', 'verified'])
     ->name('manage-cart-id');
