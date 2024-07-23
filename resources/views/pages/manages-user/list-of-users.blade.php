@@ -102,7 +102,7 @@
                                     <button class="bg-primary text-white px-4 py-2 rounded">EDIT</button>
                                 </td>
                             </tr>
-                            <tr class="dark:bg-foreground/20">
+                            <tr class="bg-foreground/20">
                                 <td class="py-2 p-5 border">2</td>
                                 <td class="py-2 p-5 border">jessicadora.anthony@petronas.com.my</td>
                                 <td class="py-2 p-5 border">PunchOut</td>

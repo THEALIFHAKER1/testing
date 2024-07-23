@@ -44,7 +44,7 @@
                     <div class="overflow-auto w-full text-nowrap border-2 rounded-md">
                         <table class="w-full border rounded-md overflow-hidden p-1">
                             <thead>
-                                <tr class="dark:bg-primary">
+                                <tr class="bg-primary">
                                     <th class="py-2 p-5 border">No.</th>
                                     <th class="py-2 p-5 border w-full">Role</th>
                                     <th class="py-2 p-5 border">Status</th>
@@ -64,7 +64,7 @@
                                         <button class="bg-primary text-white px-4 py-2 rounded">EDIT</button>
                                     </td>
                                 </tr>
-                                <tr class="dark:bg-foreground/20">
+                                <tr class="bg-foreground/20">
                                     <td class="py-2 p-5 border">2</td>
                                     <td class="py-2 p-5 border">PunchOut</td>
                                     <td class="py-2 p-5 border">

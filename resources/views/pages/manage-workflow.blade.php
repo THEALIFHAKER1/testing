@@ -114,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="overflow-auto w-full text-nowrap ">
+                    <div class="overflow-auto w-full text-nowrap border-2 rounded-md">
                         <table class="w-full border rounded-md overflow-hidden p-1">
                             <thead>
                                 <tr class="bg-primary">

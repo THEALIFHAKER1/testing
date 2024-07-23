@@ -5,11 +5,11 @@
         </h2>
     </x-slot>
     <div class="p-4 sm:p-8 bg-white dark:bg-foreground/20 shadow rounded-lg overflow-auto h-full w-full">
-        <div class="flex justify-between items-center text-center align-middle pb-5 border-b">
+        <div class="flex flex-col md:flex-row gap-5 justify-between items-center text-center align-middle pb-5 border-b">
             <div class="w-full overflow-auto flex text-3xl font-bold">
                 SUPPLIER ANALYTICS
             </div>
-            <div class="flex justify-between gap-2">
+            <div class="flex mb-4 gap-5 flex-col md:flex-row">
                 <div class="w-[300px]">
                     <select wire:model="selectedUser" class="block w-full rounded-md text-black">
                         <option value="" disabled selected>Report Type</option>
@@ -35,12 +35,11 @@
                     Data generated on 2020-08-26 15:30:53
                 </p>
             </div>
-            <div class="bg-white dark:bg-foreground/20 p-5 flex flex-col gap-5 rounded-md">
                 <div class="bg-white dark:bg-foreground/20 p-5 flex flex-col gap-5 rounded-md">
-                    <div class="overflow-auto w-full text-nowrap ">
+                    <div class="overflow-auto w-full text-nowrap border-2 rounded-md">
                         <table class="w-full border rounded-md overflow-hidden p-1">
                             <thead>
-                                <tr class="dark:bg-primary">
+                                <tr class="bg-primary">
                                     <th class="py-2 p-5 border">No.</th>
                                     <th class="py-2 p-5 border w-full">Supplier</th>
                                     <th class="py-2 p-5 border">Number Of Order</th>
@@ -48,7 +47,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="dark:bg-foreground/20">
+                                <tr class="">
                                     <td class="py-2 p-5 border">1</td>
                                     <td class="py-2 p-5 border">Tenderin Sdn Bhd I</td>
                                     <td class="py-2 p-5 border">
@@ -58,7 +57,7 @@
                                         3,706.10
                                     </td>
                                 </tr>
-                                <tr class="">
+                                <tr class="bg-foreground/20">
                                     <td class="py-2 p-5 border">2</td>
                                     <td class="py-2 p-5 border">Tenderin Sdn Bhd III</td>
                                     <td class="py-2 p-5 border">
@@ -72,7 +71,6 @@
                         </table>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </x-app-layout>
