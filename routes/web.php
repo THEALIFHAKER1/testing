@@ -50,6 +50,10 @@ Route::view('/news', 'pages.news')
     ->middleware(['auth', 'verified'])
     ->name('news');
 
+Route::view('/chat', 'pages.chat')
+    ->middleware(['auth', 'verified'])
+    ->name('chat');
+
 Route::view('profile', 'pages.profile')
     ->middleware(['auth'])
     ->name('profile');
