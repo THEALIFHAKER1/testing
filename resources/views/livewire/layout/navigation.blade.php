@@ -125,7 +125,7 @@ new class extends Component {
                         </ul>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">
+                        <a href="/news" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">
                             <span class="icon">🔔</span>
                             <span class="ml-2">News (7)</span>
                         </a>
@@ -328,7 +328,7 @@ new class extends Component {
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">
+                            <a href="/news" class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">
                                 <span class="icon">🔔</span>
                                 <span class="ml-2">News (7)</span>
                             </a>

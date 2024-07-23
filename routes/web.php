@@ -34,6 +34,22 @@ Route::view('/customize-report', 'pages.customize-report')
     ->middleware(['auth', 'verified'])
     ->name('manage-workflow');
 
+Route::view('/manage-orders', 'pages.manage-orders.manage-orders')
+    ->middleware(['auth', 'verified'])
+    ->name('manage-orders');
+
+Route::view('/manage-pre-orders', 'pages.manage-orders.manage-pre-orders')
+    ->middleware(['auth', 'verified'])
+    ->name('manage-pre-orders');
+
+Route::view('/manage-cart-id', 'pages.manage-orders.manage-cart-id')
+    ->middleware(['auth', 'verified'])
+    ->name('manage-cart-id');
+
+Route::view('/news', 'pages.news')
+    ->middleware(['auth', 'verified'])
+    ->name('news');
+
 Route::view('profile', 'pages.profile')
     ->middleware(['auth'])
     ->name('profile');
