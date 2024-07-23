@@ -72,45 +72,42 @@
         </div>
 
         <div class="pt-5 flex-grow">
-            <div class="flex mb-4 border-b pb-5">
-                <div class="w-1/3">
+            <div class="flex mb-4 border-b pb-5 gap-5 flex-col md:flex-row">
+                <div class="w-full md:w-1/3">
                     <input type="text" wire:model="recordedDate" class="block w-full rounded-md text-black uppercase"
                         placeholder="Workflow Name" />
                 </div>
-                <div class="w-1/3  ml-2">
+                <div class="w-full md:w-1/3 ">
                     <select wire:model="selectedUser" class="block w-full rounded-md text-black">
                         <option value="" disabled selected>Location</option>
                         <option value="Azhan">All</option>
                     </select>
                 </div>
-                <div class="w-1/3  ml-2">
+                <div class="w-full md:w-1/3">
                     <select wire:model="selectedUser" class="block w-full rounded-md text-black">
                         <option value="" disabled selected>Charge Code</option>
                         <option value="Azhan">All</option>
                     </select>
                 </div>
-                <div class="w-1/3  ml-2">
+                <div class="w-full md:w-1/3">
                     <select wire:model="selectedUser" class="block w-full rounded-md text-black">
                         <option value="" disabled selected>Raiser</option>
                         <option value="Azhan">All</option>
                     </select>
                 </div>
-                <div class="w-1/3  ml-2">
+                <div class="w-full md:w-1/3">
                     <select wire:model="selectedUser" class="block w-full rounded-md text-black">
                         <option value="" disabled selected>Approver</option>
                         <option value="Azhan">All</option>
                     </select>
                 </div>
-                <div class="ml-6">
+                <div class="">
                     <button wire:click="resetFilters"
-                        class="bg-red-500 text-white px-4 py-2 rounded h-full">Reset</button>
+                        class="bg-red-500 text-white px-4 py-2 rounded h-full w-full md:w-fit">Reset</button>
                 </div>
             </div>
-
-
-            <div class="bg-white dark:bg-foreground/20 p-5 flex flex-col gap-5 rounded-md">
                 <div class="bg-white dark:bg-foreground/20 p-5 flex flex-col gap-5 rounded-md">
-                    <div class="grid grid-cols-2 gap-2">
+                    <div class="flex flex-col md:flex-row gap-2 justify-between">
                         <div class="text-start font-light justify-start self-center">
                             <div class="text-sm">
                                 Showing 0 to 0 of 0 entries
@@ -120,7 +117,7 @@
                     <div class="overflow-auto w-full text-nowrap ">
                         <table class="w-full border rounded-md overflow-hidden p-1">
                             <thead>
-                                <tr class="dark:bg-primary">
+                                <tr class="bg-primary">
                                     <th class="py-2 p-5 border">No.</th>
                                     <th class="py-2 p-5 border w-full">Workflow Name</th>
                                     <th class="py-2 p-5 border">Request Type</th>
@@ -132,7 +129,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="dark:bg-foreground/20">
+                                <tr class="bg-foreground/20">
                                     <td class="py-2 p-5 border text-center text-red-400" colspan="8">
                                         No Workflow Settings Found
                                     </td>
@@ -140,7 +137,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="grid grid-cols-2 gap-2">
+                    <div class="flex flex-col md:flex-row gap-2 justify-between">
                         <div class="text-start font-light justify-start self-center">
                             <div class="text-sm">
                                 Showing 0 to 0 of 0 entries
@@ -148,8 +145,6 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
         </div>
     </div>
 </x-app-layout>
