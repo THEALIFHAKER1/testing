@@ -167,12 +167,12 @@ new class extends Component {
                         </a>
                         <ul x-show="openMenu === id" class="pl-8 ">
                             <li>
-                                <a href="#"
+                                <a href="/users-to-except"
                                     class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">User to
                                     except</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/logs-transaction"
                                     class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Logs
                                     transaction</a>
                             </li>
@@ -370,12 +370,12 @@ new class extends Component {
                             </a>
                             <ul x-show="openMenu === id" class="pl-8 ">
                                 <li>
-                                    <a href="#"
+                                    <a href="/users-to-except"
                                         class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">User to
                                         except</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="/logs-transaction"
                                         class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Logs
                                         transaction</a>
                                 </li>

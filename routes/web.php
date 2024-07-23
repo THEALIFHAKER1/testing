@@ -66,6 +66,14 @@ Route::view('/manage-gl-code', 'pages.manage-budget.manage-gl-code')
     ->middleware(['auth', 'verified'])
     ->name('manage-gl-code');
 
+Route::view('/users-to-except', 'pages.manage-unit-limit-exception.users-to-except')
+    ->middleware(['auth', 'verified'])
+    ->name('users-to-except');
+
+Route::view('/logs-transaction', 'pages.manage-unit-limit-exception.logs-transaction')
+    ->middleware(['auth', 'verified'])
+    ->name('logs-transaction');
+
 Route::view('profile', 'pages.profile')
     ->middleware(['auth'])
     ->name('profile');
