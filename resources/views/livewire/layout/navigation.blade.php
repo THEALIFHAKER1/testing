@@ -104,21 +104,21 @@ new class extends Component {
                         </a>
                         <ul x-show="openMenu === id" class="pl-8 ">
                             <li>
-                                <a href="#"
+                                <a href="/manage-orders"
                                     class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage Orders</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/manage-pre-orders"
                                     class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage
                                     Pre-Orders</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/manage-budget-request"
                                     class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage Budget
                                     Request</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/manage-cart-id"
                                     class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage Cart
                                     ID</a>
                             </li>
@@ -305,23 +305,23 @@ new class extends Component {
                             </a>
                             <ul x-show="openMenu === id" class="pl-8 ">
                                 <li>
-                                    <a href="#"
+                                    <a href="/manage-orders"
                                         class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage
                                         Orders</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="/manage-pre-orders"
                                         class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage
                                         Pre-Orders</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="/manage-budget-request"
                                         class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage
                                         Budget
                                         Request</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="/manage-cart-id"
                                         class="flex items-center p-4 hover:bg-gray-200 hover:text-primary">Manage Cart
                                         ID</a>
                                 </li>
