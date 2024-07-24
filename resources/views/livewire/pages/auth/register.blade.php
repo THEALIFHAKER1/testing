@@ -8,8 +8,7 @@ use Illuminate\Validation\Rules;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 
-new #[Layout('layouts.guest')] class extends Component
-{
+new #[Layout('layouts.guest')] class extends Component {
     public string $name = '';
     public string $email = '';
     public string $password = '';
@@ -27,7 +26,7 @@ new #[Layout('layouts.guest')] class extends Component
             'phone' => ['required', 'string', 'max:255'],
         ]);
 
-        event(new Registered($user = User::create($validated)));
+        event(new Registered(($user = User::create($validated))));
 
         Auth::login($user);
 
@@ -36,17 +35,13 @@ new #[Layout('layouts.guest')] class extends Component
 }; ?>
 
 <div class="h-full flex w-full">
-    <div class="w-full grid place-items-center p-10">
+    <div class="w-full hidden md:grid place-items-center p-10">
         <img draggable="false" src="{{ Vite::asset('resources/images/auth.svg') }}" alt="">
     </div>
-    <div class="w-1/2 h-full grid place-items-center">
+    <div class="w-full p-2 md:p-0 md:w-1/2 h-full grid place-items-center">
         <div class="flex flex-col gap-5">
-            <img
-                draggable="false"
-                class="w-1/2"
-                src="{{ Vite::asset('resources/images/lapasarlogo.png') }}"
-                alt=""
-            >
+            <img draggable="false" class="w-1/2 rounded-md p-2 bg-white" src="{{ Vite::asset('resources/images/lapasarlogo.png') }}"
+                alt="">
             <p class="text-3xl font-bold text-orange-500">
                 Hi there, Welcome to Lapasar.com!
             </p>
@@ -54,7 +49,7 @@ new #[Layout('layouts.guest')] class extends Component
                 <!-- Session Status -->
                 <x-auth-session-status class="mb-4" :status="session('status')" />
 
-                <p class="text-center my-5">
+                <p class="text-center my-5 text-black">
                     Enter your personal details and start your journey with us.
                 </p>
                 <form wire:submit="login">
@@ -62,7 +57,9 @@ new #[Layout('layouts.guest')] class extends Component
                     <div>
                         <div class="flex items-center gap-2">
                             🏢
-                            <x-text-input wire:model="form.companyName" id="companyName" class="block mt-1 w-full" type="text" name="companyName" required autofocus autocomplete="companyName" placeholder="Company Name"/>
+                            <x-text-input wire:model="form.companyName" id="companyName" class="block mt-1 w-full"
+                                type="text" name="companyName" required autofocus autocomplete="companyName"
+                                placeholder="Company Name" />
                         </div>
                         <x-input-error :messages="$errors->get('form.companyName')" class="mt-2" />
                     </div>
@@ -71,7 +68,9 @@ new #[Layout('layouts.guest')] class extends Component
                     <div class="mt-4">
                         <div class="flex items-center gap-2">
                             🧑
-                            <x-text-input wire:model="form.contactName" id="contactName" class="block mt-1 w-full" type="text" name="contactName" required autofocus autocomplete="contactName" placeholder="Contact person Name"/>
+                            <x-text-input wire:model="form.contactName" id="contactName" class="block mt-1 w-full"
+                                type="text" name="contactName" required autofocus autocomplete="contactName"
+                                placeholder="Contact person Name" />
                         </div>
                         <x-input-error :messages="$errors->get('form.contactName')" class="mt-2" />
                     </div>
@@ -80,7 +79,9 @@ new #[Layout('layouts.guest')] class extends Component
                     <div class="mt-4">
                         <div class="flex items-center gap-2">
                             👥
-                            <x-text-input wire:model="form.email" id="email" class="block mt-1 w-full" type="email" name="email" required autofocus autocomplete="username" placeholder="Email"/>
+                            <x-text-input wire:model="form.email" id="email" class="block mt-1 w-full"
+                                type="email" name="email" required autofocus autocomplete="username"
+                                placeholder="Email" />
                         </div>
                         <x-input-error :messages="$errors->get('form.email')" class="mt-2" />
                     </div>
@@ -90,19 +91,22 @@ new #[Layout('layouts.guest')] class extends Component
                         <div class="flex items-center gap-2">
                             📱
                             <x-text-input wire:model="form.phone" id="phone" class="block mt-1 w-full"
-                                          type="tel"
-                                          name="phone"
-                                          required autocomplete="current-phone"
-                                          placeholder="Mobile Number"
-                            />
+                                type="tel" name="phone" required autocomplete="current-phone"
+                                placeholder="Mobile Number" />
                         </div>
                         <x-input-error :messages="$errors->get('form.password')" class="mt-2" />
 
                         <!-- Agreed Checkbox -->
                         <div class="block mt-4">
                             <label for="remember" class="inline-flex items-center">
-                                <input x-model="agreed" id="agreed" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('I have read and agreed to the ') }}</span> <a class="text-xs ml-1 text-blue-400" href="https://app-uat.lapasar.com/app/buyers/Buyer TnCs.pdf" target="_blank">Terms &amp; Policy</a>
+                                <input x-model="agreed" id="agreed" type="checkbox"
+                                    class="rounded  border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
+                                    name="remember">
+                                <span
+                                    class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('I have read and agreed to the ') }}</span>
+                                <a class="text-xs ml-1 text-blue-400"
+                                    href="https://app-uat.lapasar.com/app/buyers/Buyer TnCs.pdf" target="_blank">Terms
+                                    &amp; Policy</a>
                             </label>
                         </div>
                     </div>
@@ -116,7 +120,8 @@ new #[Layout('layouts.guest')] class extends Component
                     </div>
                     <div class="flex justify-between mt-5">
                         @if (Route::has('login'))
-                            <a class="hover:underline text-sm text-[#337ab7] " href="{{ route('login') }}" wire:navigate>
+                            <a class="hover:underline text-sm text-[#337ab7] " href="{{ route('login') }}"
+                                wire:navigate>
                                 {{ __('Already a member? Sign in here.') }}
                             </a>
                         @endif

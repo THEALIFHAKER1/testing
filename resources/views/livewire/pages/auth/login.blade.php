@@ -25,14 +25,14 @@ new #[Layout('layouts.guest')] class extends Component
 }; ?>
 
 <div class="h-full flex w-full">
-    <div class="w-full grid place-items-center p-10">
+    <div class="w-full place-items-center p-10 hidden md:grid">
         <img draggable="false" src="{{ Vite::asset('resources/images/auth.svg') }}" alt="">
     </div>
-    <div class="w-1/2 h-full grid place-items-center">
+    <div class="w-full p-2 md:p-0 md:w-1/2 h-full grid place-items-center">
         <div class="flex flex-col gap-5">
             <img
                 draggable="false"
-                class="w-1/2"
+                class="w-1/2 bg-white rounded-md p-2"
                 src="{{ Vite::asset('resources/images/lapasarlogo.png') }}"
                 alt=""
             >
@@ -43,7 +43,7 @@ new #[Layout('layouts.guest')] class extends Component
                 <!-- Session Status -->
                 <x-auth-session-status class="mb-4" :status="session('status')" />
 
-                <p class="text-center my-5">
+                <p class="text-center my-5 text-black">
                     Sign in to start your session
                 </p>
                 <form wire:submit="login">
