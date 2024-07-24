@@ -42,7 +42,7 @@ Route::view('/manage-pre-orders', 'pages.manage-orders.manage-pre-orders')
     ->middleware(['auth', 'verified'])
     ->name('manage-pre-orders');
 
-Route::view('/manage-budget-request', 'pages.manage-orders.manage-budget-request')
+Route::view('/manage-budget-request', 'pages.dashboard')
     ->middleware(['auth', 'verified'])
     ->name('manage-budget-request');
 
@@ -62,11 +62,11 @@ Route::view('/chat/chat-details', 'pages.chat.chat-details')
     ->middleware(['auth', 'verified'])
     ->name('chat');
 
-Route::view('/manage-budget', 'pages.manage-budget.manage-budget')
+Route::view('/manage-budget', 'pages.dashboard')
     ->middleware(['auth', 'verified'])
     ->name('manage-budget');
 
-Route::view('/manage-gl-code', 'pages.manage-budget.manage-gl-code')
+Route::view('/manage-gl-code', 'pages.dashboard')
     ->middleware(['auth', 'verified'])
     ->name('manage-gl-code');
 
