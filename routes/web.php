@@ -54,7 +54,11 @@ Route::view('/news', 'pages.news')
     ->middleware(['auth', 'verified'])
     ->name('news');
 
-Route::view('/chat', 'pages.chat')
+Route::view('/chat', 'pages.chat.chat')
+    ->middleware(['auth', 'verified'])
+    ->name('chat-details');
+
+Route::view('/chat/chat-details', 'pages.chat.chat-details')
     ->middleware(['auth', 'verified'])
     ->name('chat');
 

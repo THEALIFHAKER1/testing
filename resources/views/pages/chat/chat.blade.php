@@ -42,7 +42,9 @@
                                     <td class="py-2 p-5 border">Lapasar.com(haven@lapasar.com)</td>
                                     <td class="py-2 p-5 border">2024-01-30 08:11:08</td>
                                     <td class="py-2 p-5 border">
-                                        <button class="bg-primary text-white px-4 py-2 rounded">Message</button>
+                                        <a href="/chat/chat-details">
+                                            <button class="bg-primary text-white px-4 py-2 rounded">Message</button>
+                                        </a>
                                     </td>
                                 </tr>
                             </tbody>
