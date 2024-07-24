@@ -27,12 +27,12 @@
         <main class="w-full h-full p-5 gap-5 flex flex-col overflow-auto">
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="flex items-center text-center">
+                <header class="flex md:items-center text-start md:text-center flex-col md:flex-row gap-2">
                     <div class="w-fit">
                         {{ $header }}
                     </div>
                     @if (isset($action))
-                        <div class="ml-auto flex gap-2">
+                        <div class="md:ml-auto flex gap-2">
                             {{ $action }}
                         </div>
                     @endif
