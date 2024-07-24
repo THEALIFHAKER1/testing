@@ -74,6 +74,10 @@ Route::view('/logs-transaction', 'pages.manage-unit-limit-exception.logs-transac
     ->middleware(['auth', 'verified'])
     ->name('logs-transaction');
 
+Route::view('/report', 'pages.report')
+    ->middleware(['auth', 'verified'])
+    ->name('report');
+
 Route::view('profile', 'pages.profile')
     ->middleware(['auth'])
     ->name('profile');
